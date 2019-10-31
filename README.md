@@ -41,6 +41,15 @@ This application gives a brief showing of the power of JavaScript and HTML.
 |D  |500 |
 |M  |1000 |
 
+
+|Input|Output|
+|---|---|
+|4000|return false |
+|1|I |
+|23|XXIII |
+|512  |DXII  |
+|3999  |MMMCMXCIX|
+
 ### Support and contact details
 
 If you run into any issues running **Roman Numerals**, please contact the repo owners.
