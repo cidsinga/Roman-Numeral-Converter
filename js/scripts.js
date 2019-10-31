@@ -17,13 +17,13 @@ function romanNumeral(number){
       console.log("slicedArray: ", slicedArray);
       console.log("slicedArray[i]", slicedArray[i]);
     var parsedArray = parseInt(slicedArray);
-    console.log(parsedArray);
-  } while (parsedArray > 0) {
-    console.log("line22boom");
+    console.log("Parsed Array: ", parsedArray);
+  } while (parsedArray >= 1) { //Checks 1000 place
       result.push(thousands);
+      var joinedResult = result.join("")
       parsedArray--;
     }
-    console.log(result);
+    console.log(joinedResult);
   }
 }
 
@@ -44,13 +44,6 @@ $(document).ready(function(){
 // }
 // let slicedArray = numArr.slice(-4);
 
-
-
-
-// Checking Thousands up to 4
-// for(var i = 1; i <= number[0]; i++){
-// 	replace(M)
-// }
 
 //If/Else index check
 // if(slicedArray[0] === "0"){
