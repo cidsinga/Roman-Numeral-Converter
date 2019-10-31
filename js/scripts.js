@@ -4,14 +4,39 @@ const hundreds = ['C', 'D'];
 const tens = ['L', 'X'];
 const ones = ['I', 'V'];
 function romanNumeral(number){
+  let numArr = [];
   let stringNumber = number.toString().split('');
-  console.log("split: ", stringNumber);
+  // console.log("split: ", stringNumber);
   if(number > 3999){
     alert('Roman Numerals only go up to 3,999, please enter a smaller number');
-  } else if (number.length){
-    console.log('Else');
-    //How many times divisible?
-    //Multiple that number by M
+  } else if(stringNumber.length < 4){
+  	for(var i = 0; i <= 4; i++){
+  		stringNumber.unshift('0');
+      let slicedArray = stringNumber.slice(-4);
+      console.log("slicedArray: ", slicedArray);
+      console.log("slicedArray[i]", slicedArray[i]);
+      if(slicedArray[i] === "0"){
+        console.log("Index is zero!");
+      } else if(slicedArray[i] === "1"){
+        console.log("Index is 1!");
+      } else if(slicedArray[i] === "2"){
+        console.log("Index is 2!");
+      }else if(slicedArray[i] === "3"){
+        console.log("Index is 3!");
+      }else if(slicedArray[i] === "4"){
+        console.log("Index is 4!");
+      }else if(slicedArray[i] === "5"){
+        console.log("Index is 5!");
+      }else if(slicedArray[i] === "6"){
+        console.log("Index is 6!");
+      }else if(slicedArray[i] === "7"){
+        console.log("Index is 7!");
+      }else if(slicedArray[i] === "8"){
+        console.log("Index is 8!");
+      }else if(slicedArray[i] === "9"){
+        console.log("Index is 9!");
+      }
+  	}
   }
 }
 
