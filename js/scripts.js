@@ -1,13 +1,14 @@
 //Business Logic
-const numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
-const numberalMatch = ['M', 'CM', 'D', 'CD', 'C', 'LC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
-
-function romanNumeral(numInput){
-  for(var i = 0; i<numbers.length; i++){
-    // console.log(i);
+function romanNumeralConverter(numInput){
+  let romanString = '';
+  const numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+  const romanNumerals = ['M', 'CM', 'D', 'CD', 'C', 'LC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+  for(var i = 0; i<=numbers.length; i++){
     console.log('numbers[i]', numbers[i]);
-    while(numInput%numbers[i] <numInput){
-      console.log('i: ', i);
+    while(numInput%numbers[i] < numInput){
+      romanString += romanNumerals[i];
+      console.log('romanString: ', romanString);
+      numInput -= numbers[i];
     }
   }
 }
@@ -18,7 +19,7 @@ $(document).ready(function(){
   $('#romanNumeralForm').submit(function(event){
   event.preventDefault();
   let numeralInput = parseInt($('input#numberInput').val());
-  let numeralConverter = romanNumeral(numeralInput);
+  let numeralConverter = romanNumeralConverter(numeralInput);
   });
 });
 
