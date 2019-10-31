@@ -1,31 +1,17 @@
 //Business Logic
-const thousands = "M";
-const hundreds = ['C', 'D'];
-const tens = ['L', 'X'];
-const ones = ['I', 'V'];
-const result = [];
-function romanNumeral(number){
-  let numArr = [];
-  let stringNumber = number.toString().split('');
-  // console.log("split: ", stringNumber);
-  if(number > 3999){
-    alert('Roman Numerals only go up to 3,999, please enter a smaller number');
-  } else if(stringNumber.length < 5){
-  	for(var i = 0; i <= 4; i++){
-  		stringNumber.unshift('0');
-      let slicedArray = stringNumber.slice(-4);
-      console.log("slicedArray: ", slicedArray);
-      console.log("slicedArray[i]", slicedArray[i]);
-    var parsedArray = parseInt(slicedArray);
-    console.log("Parsed Array: ", parsedArray);
-  } while (parsedArray >= 1) { //Checks 1000 place
-      result.push(thousands);
-      var joinedResult = result.join("")
-      parsedArray--;
+const numbers = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+const numberalMatch = ['M', 'CM', 'D', 'CD', 'C', 'LC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I'];
+
+function romanNumeral(numInput){
+  for(var i = 0; i<numbers.length; i++){
+    // console.log(i);
+    console.log('numbers[i]', numbers[i]);
+    while(numInput%numbers[i] <numInput){
+      console.log('i: ', i);
     }
-    console.log(joinedResult);
   }
 }
+
 
 //Front End Logic
 $(document).ready(function(){
