@@ -1,8 +1,9 @@
 //Business Logic
-const thousands = ['M'];
+const thousands = "M";
 const hundreds = ['C', 'D'];
 const tens = ['L', 'X'];
 const ones = ['I', 'V'];
+const result = [];
 function romanNumeral(number){
   let numArr = [];
   let stringNumber = number.toString().split('');
@@ -15,30 +16,14 @@ function romanNumeral(number){
       let slicedArray = stringNumber.slice(-4);
       console.log("slicedArray: ", slicedArray);
       console.log("slicedArray[i]", slicedArray[i]);
-      if(slicedArray[0] === "0"){
-        console.log("slicedArray[i] 0 branch", slicedArray[i]);
-        slicedArray.splice(0,1);
-        console.log("Splice: ", slicedArray);
-      } else if(slicedArray[i] === "1"){
-        console.log("Index is 1!");
-      } else if(slicedArray[i] === "2"){
-        console.log("Index is 2!");
-      }else if(slicedArray[i] === "3"){
-        console.log("Index is 3!");
-      }else if(slicedArray[i] === "4"){
-        console.log("Index is 4!");
-      }else if(slicedArray[i] === "5"){
-        console.log("Index is 5!");
-      }else if(slicedArray[i] === "6"){
-        console.log("Index is 6!");
-      }else if(slicedArray[i] === "7"){
-        console.log("Index is 7!");
-      }else if(slicedArray[i] === "8"){
-        console.log("Index is 8!");
-      }else if(slicedArray[i] === "9"){
-        console.log("Index is 9!");
-      }
-  	}
+    var parsedArray = parseInt(slicedArray);
+    console.log(parsedArray);
+  } while (parsedArray > 0) {
+    console.log("line22boom");
+      result.push(thousands);
+      parsedArray--;
+    }
+    console.log(result);
   }
 }
 
@@ -65,4 +50,29 @@ $(document).ready(function(){
 // Checking Thousands up to 4
 // for(var i = 1; i <= number[0]; i++){
 // 	replace(M)
+// }
+
+//If/Else index check
+// if(slicedArray[0] === "0"){
+//   console.log("slicedArray[i] 0 branch", slicedArray[i]);
+//   slicedArray.splice(0,1);
+//   console.log("Splice: ", slicedArray);
+// } else if(slicedArray[i] === "1"){
+//   console.log("Index is 1!");
+// } else if(slicedArray[i] === "2"){
+//   console.log("Index is 2!");
+// }else if(slicedArray[i] === "3"){
+//   console.log("Index is 3!");
+// }else if(slicedArray[i] === "4"){
+//   console.log("Index is 4!");
+// }else if(slicedArray[i] === "5"){
+//   console.log("Index is 5!");
+// }else if(slicedArray[i] === "6"){
+//   console.log("Index is 6!");
+// }else if(slicedArray[i] === "7"){
+//   console.log("Index is 7!");
+// }else if(slicedArray[i] === "8"){
+//   console.log("Index is 8!");
+// }else if(slicedArray[i] === "9"){
+//   console.log("Index is 9!");
 // }
