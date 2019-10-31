@@ -9,14 +9,16 @@ function romanNumeral(number){
   // console.log("split: ", stringNumber);
   if(number > 3999){
     alert('Roman Numerals only go up to 3,999, please enter a smaller number');
-  } else if(stringNumber.length < 4){
+  } else if(stringNumber.length < 5){
   	for(var i = 0; i <= 4; i++){
   		stringNumber.unshift('0');
       let slicedArray = stringNumber.slice(-4);
       console.log("slicedArray: ", slicedArray);
       console.log("slicedArray[i]", slicedArray[i]);
-      if(slicedArray[i] === "0"){
-        console.log("Index is zero!");
+      if(slicedArray[0] === "0"){
+        console.log("slicedArray[i] 0 branch", slicedArray[i]);
+        slicedArray.splice(0,1);
+        console.log("Splice: ", slicedArray);
       } else if(slicedArray[i] === "1"){
         console.log("Index is 1!");
       } else if(slicedArray[i] === "2"){
